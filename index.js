@@ -70,7 +70,7 @@ module.exports = (function(){
         return myMonths[date.getMonth()];
     }
     /*
-     * @param year - a year in number format
+     * @param year - a year in number type
      *
      * Will build all months in that year calling buildMonth method
      *
