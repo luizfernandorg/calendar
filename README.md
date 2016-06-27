@@ -67,3 +67,4 @@ I insert the follow line:
 ```
 export PATH=$PATH:/home/myname/node/bin
 ```
+Is necessary reboot the the system, or just type the line above in the terminal.
