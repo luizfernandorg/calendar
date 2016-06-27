@@ -47,7 +47,7 @@ You can type the line bellow:
 ```
 $ sudo apt-get install node
 ```
-But I prefer download the binary from [![Nodejs]][https://nodejs.org/en/]
+But I prefer download the binary from [![Nodejs](https://nodejs.org/en/)]
 
 Decompress the file:
 
