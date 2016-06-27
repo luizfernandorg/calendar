@@ -42,6 +42,28 @@ This is a example based on Tim O'kellys's code, about calendar generate, still i
 
 Will need install node
 
+You can type the line bellow:
+
 ```
-$ npm install node
+$ sudo apt-get install node
+```
+But I prefer download the binary from [![Nodejs]][https://nodejs.org/en/]
+
+Decompress the file:
+
+```
+$ tar -xvf node-vn.n.n-linux-xnn.tar.xz
+```
+
+Then, I move the directory to ~/ what means in Linux, /home/myname/node
+
+```
+$ mv node-vn.n.n-linux-xnn ~/node
+```
+
+So, for finish I edit my profile file, in ~/home/myname/.profile,
+and I insert the follow line:
+
+```
+export PATH=$PATH:/home/fernando/node/bin
 ```
