@@ -1,11 +1,11 @@
-## Synopsis
+## Calendar API
 
 This is a example based on Tim O'kellys's code, about calendar generate, still in construction
 
 ## Code Example
 
-  '''
-  var calendar = require('./index')
+  ```js
+  var calendar = require('./index');
 
   var months = calendar.buildYear(new Date().getFullYear());
 
@@ -36,16 +36,12 @@ This is a example based on Tim O'kellys's code, about calendar generate, still i
       //show the month in 6x7 format
       console.log(lines);
   }
-  '''
-
-## Motivation
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+  ```
 
 ## Installation
 
 Will need install node
 
-'''
-npm install node
-'''
+```
+$ npm install node
+```
