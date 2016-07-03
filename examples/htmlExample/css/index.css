@@ -6,30 +6,34 @@ body {
   width: 316px;
   margin: 2px;
 }
-@media (min-width: 320px){
+@media (max-width: 321px){
   .calendarBox {
       width: 319;
       height: 190;
   }
 }
-table {
+.monthCalendar, .monthCalendars {
   width: 316px;
   height: 285px;
 }
-td {
+.monthCalendar tr td,
+.monthCalendars tr td {
   border: 1px solid #ccc;
   padding: 5px;
   text-align: center;
 }
-a {
+.monthCalendars tr td a,
+.monthCalendar tr td a {
   color: #555;
   cursor: pointer;
 }
-a:hover, a:focus {
+.monthCalendars tr td a:hover, .monthCalendars tr td a:focus,
+.monthCalendar tr td a:hover, .monthCalendar tr td a:focus {
   color: #333;
   text-decoration: none;
 }
-td:hover, td:focus {
+.monthCalendar tr td:hover, .monthCalendar tr td:focus,
+.monthCalendars tr td:hover, .monthCalendars tr td:focus{
   background-color: #ccc;
 }
 .monthCalendar tr:last-of-type td:last-of-type {
@@ -60,9 +64,9 @@ td:hover, td:focus {
   left: 2px;
   display: none;
 }
-td.othermonths {
+.monthCalendar tr td.othermonths {
   color: #ccc;
 }
-td.othermonths:hover, td.othermonths:focus {
+.monthCalendar tr td.othermonths:hover, .monthCalendar tr td.othermonths:focus {
   background-color: #aaa;
 }
