@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.calendarBox {
+  width: 316px;
+  margin: 2px;
+}
+@media (min-width: 320px){
+  .calendarBox {
+      width: 319;
+      height: 190;
+  }
+}
+table {
+  width: 316px;
+  height: 285px;
+}
+td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+a {
+  color: #555;
+  cursor: pointer;
+}
+a:hover, a:focus {
+  color: #333;
+  text-decoration: none;
+}
+td:hover, td:focus {
+  background-color: #ccc;
+}
+.monthCalendar tr:last-of-type td:last-of-type {
+  text-align: right;
+  border: 0px;
+  position: relative;
+}
+.monthCalendar tr:last-of-type td:last-of-type span {
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.monthCalendar tr:last-of-type td:last-of-type:hover,
+.monthCalendar tr:last-of-type td:last-of-type:focus {
+  background-color: transparent;
+}
+.monthCalendar tr:first-child:hover,
+.monthCalendar tr:first-child:focus {
+  background-color: transparent;
+}
+.monthCalendars {
+  /*display: none;*/
+}
+.monthCalendar {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: none;
+}
+.monthCalendar > td {
+
+}
