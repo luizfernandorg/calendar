@@ -60,6 +60,9 @@ td:hover, td:focus {
   left: 2px;
   display: none;
 }
-.monthCalendar > td {
-
+td.othermonths {
+  color: #ccc;
+}
+td.othermonths:hover, td.othermonths:focus {
+  background-color: #aaa;
 }

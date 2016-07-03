@@ -14,7 +14,7 @@
  *
  * This model will repeat for all months in 2016
  */
-var calendar = require('../index');
+var calendar = require('../../index');
 var fs = require('fs');
 
 fs.open('./year2016.txt','w+', function(err, fd){

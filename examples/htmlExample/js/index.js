@@ -24,9 +24,9 @@
    */
   function buildMonthCalendar(month){
     var year = new Date().getFullYear();
-
+    var actualDate = new Date(year, months[month], 1 );
     // Call the builder to construct the date for the month
-    var dates = calendar.buildMonth(new Date(year, months[month], 1 ));
+    var dates = calendar.buildMonth(actualDate);
 
     var tds = $('.monthCalendar tr td');
 
@@ -38,6 +38,10 @@
      */
     for(var td = 7; td < tds.length-1; td++){
       tds[td].innerHTML = dates[td-7].getDate();
+      if(dates[td-7].getMonth() < new Date(year, months[month], 1 ).getMonth() ||
+         dates[td-7].getMonth() > new Date(year, months[month], 1 ).getMonth()){
+           $(tds[td]).addClass('othermonths');
+      }
     }
   }
 
