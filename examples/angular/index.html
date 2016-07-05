@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>ng-workshop</title>
+  <meta name="description" content="Interactive AngularJS Tutorial" />
+  <meta name="keywords" content="AngularJS, AngularJS Tutorial" />
+  <meta name="author" content="Kent C. Dodds" />
+
+  <!-- Bring in Bootstrap css so things look nice by default -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" href="css/animate.css"/>
+
+
+</head>
+<body ng-controller="HomeController">
+
+  <div class="calendarBox">
+    <table class="monthCalendars animated" calendar-box>
+      <tr ng-repeat="months in year">
+        <td ng-repeat="month in months">
+          <a class='monthTd' ng-click="showMonth(month.number, month.name)">{{month.name}}</a>
+        </td>
+      </tr>
+    </table>
+    <table class="monthCalendar animated" calendar-box>
+      <tr class="nameDay">
+          <td>D</td>
+          <td>S</td>
+          <td>T</td>
+          <td>Q</td>
+          <td>Q</td>
+          <td>S</td>
+          <td>S</td>
+      </tr>
+
+      <tr ng-repeat="week in weeks">
+        <td ng-repeat="date in week" ng-class="{'othermonths':date.getMonth() !== weeks[3][0].getMonth()}">
+          {{date.getDate()}}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+          <span>{{getMonth(weeks[3][0].getMonth())}}</span>
+          <a class="back" ng-click="hideMonth()">Back</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+
+<!-- bring in angular -->
+<script src="node_modules/angular/angular.js"></script>
+<script src="js/calendar.js"></script>
+<script src="angular/app.js"></script>
+<script src="angular/controllers/home-controller.js"></script>
+<script src="angular/services/services.js"></script>
+<script src="angular/directives/directive.js"></script>
+
+</script>
+<!-- add livereload script so we don't have to refresh our browser on changes -->
+<!-- <script>document.write('<script src="node_modules/livereload/lib/livereload.js?snipver=1"></' + 'script>')</script> -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+</html>

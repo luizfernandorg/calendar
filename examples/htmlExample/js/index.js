@@ -27,7 +27,7 @@
     var actualDate = new Date(year, months[month], 1 );
     // Call the builder to construct the date for the month
     var dates = calendar.buildMonth(actualDate);
-
+    console.log(dates, dates.length);
     var tds = $('.monthCalendar tr td');
 
     $('td span').text(month);//set month's name in table monthCalendar
